@@ -6,8 +6,6 @@ interface Movies {
 }
 
 export default async function fetchMovies(query: string): Promise<Movie[]> {
-  const myKey = import.meta.env.VITE_API_KEY;
-
   const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
 
   const options = {
